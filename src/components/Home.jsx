@@ -25,7 +25,6 @@ export default class Home extends React.Component{
     render() {
         return(
             <div className="todo__list">
-               <h1>Hello</h1>
                <TodoForm onNewTodo={this.onNewTodo.bind(this)}/>
                <List todos={this.state.todos} 
                onTodoToggle={this.toggleTodoState.bind(this)}/>
