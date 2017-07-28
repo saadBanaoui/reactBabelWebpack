@@ -1,6 +1,8 @@
 import React from 'react';
 import List from './List.jsx';
 import TodoForm from './TodoForm.jsx';
+
+
 export default class Home extends React.Component{
     constructor(props) {
         super(props);
@@ -22,7 +24,7 @@ export default class Home extends React.Component{
     }
     render() {
         return(
-            <div>
+            <div className="todo__list">
                <h1>Hello</h1>
                <TodoForm onNewTodo={this.onNewTodo.bind(this)}/>
                <List todos={this.state.todos} 
