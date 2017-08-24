@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import style from './style.scss';
+import bootstrap from 'bootstrap/scss/bootstrap.scss';
+
 import {
   Router,
   Route,

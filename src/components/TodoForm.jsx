@@ -14,9 +14,9 @@ export default class TodoForm extends React.Component {
     }
     render() {
         return(
-            <div className="form">
-                <input type="text" ref={(input) => this.todoTitle = input} />
-                <button onClick={this.onClick.bind(this)} >Add</button>
+            <div className="form form-inline">
+                <input type="text" ref={(input) => this.todoTitle = input} className="form-control"/>
+                <button onClick={this.onClick.bind(this)} className="btn btn-primary">Add</button>
             </div>
         );
     }

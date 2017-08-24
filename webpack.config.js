@@ -43,7 +43,21 @@ let config = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader', 'sass-loader']
+                    use: [
+                        'css-loader', 
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins: function () { // post css plugins, can be exported to postcss.config.js
+                                    return [
+                                      require('precss'),
+                                      require('autoprefixer')
+                                    ];
+                                }
+                            }
+                        },
+                        'sass-loader'
+                    ]
                 })
             }
         ]

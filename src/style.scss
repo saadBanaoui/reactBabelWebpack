@@ -13,6 +13,13 @@ main{
     background-color: #cc5;
     padding: 3rem;
 }
+
+@mixin flex {
+    // write the css here
+    display: -webkit-flex;
+    display: flex;
+}
+
 .todo__list{
     padding: 1rem;
     background: #eee;
@@ -20,7 +27,7 @@ main{
 }
 
 .navbar__nav{
-    display: flex;
+     @include flex;
     justify-content: center;
     list-style-type: none;
 
@@ -31,4 +38,7 @@ main{
         color: #444;
         text-decoration: none;
     }
+    transform: translate(30px);
 }
+
+
