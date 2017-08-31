@@ -16,7 +16,7 @@ let config = {
     watch: dev,
     output : {
         path: path.resolve('dist'),
-        filename: 'bundle.js'
+        filename: dev ? '[name].js' : '[name].[chunkhash:8].js'
     },
     devtool: dev ? "cheap-module-eval-source-map" : "source-map",
     module: {
@@ -65,7 +65,7 @@ let config = {
     plugins: [
         HtmlWebpackPluginConfig, 
         new ExtractTextPlugin({
-            filename: "[name].css",
+            filename:  dev ? '[name].css' : '[name].[contenthash:8].css',
             disable: dev
         })
     ]
